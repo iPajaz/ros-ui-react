@@ -13,14 +13,14 @@ class AxisBar extends Component {
     constructor(props) {
       super(props);
     }
-  
-  
-  
 
-  
+
+
+
+
     render() {
 
-  
+
       return (
         <CProgress
         color="dark"
@@ -29,9 +29,9 @@ class AxisBar extends Component {
         className="mb-1"
       />
 
-  
+
       );
     }
   }
-  
+
   export default AxisBar;

@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import SimGamepadDemo from './SimGamepadDemo';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SimGamepadDemo />
   </React.StrictMode>,
   document.getElementById('root')
 );

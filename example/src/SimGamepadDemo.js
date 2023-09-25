@@ -2,12 +2,18 @@ import { SimGamepad } from 'ros-ui-react';
 import { ImageStream } from 'ros-ui-react';
 import './App.css';
 import './scss/style.scss';
+import { useState } from 'react';
+
 
 function SimGamepadDemo() {
+  const [videoId, setVideoId] = useState('')
+  const updateVideoSize = (video_id) => {
+    setVideoId(video_id)
+  }
   return (
-    <div className="App">
-      <ImageStream src="http://localhost:8080/stream?topic=/camera/image_raw" />
-      <SimGamepad rosbridgeAddress="ws://localhost:9090"/>
+    <div className="App" style={{ height: "inherit" }}>
+      <ImageStream src="http://192.168.0.26:8080/stream?topic=/strctl/image_raw" type="ros_compressed" id={videoId} />
+      <SimGamepad rosbridgeAddress="ws://192.168.0.26:9090" updateVideoSize={updateVideoSize}/>
     </div>
   );
 }
